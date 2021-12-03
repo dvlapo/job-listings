@@ -23,25 +23,27 @@
       :class="{ featured_border: job.featured }"
     >
       <div class="job-info">
-        <div class="logo-container">
-          <img :src="job.logo" alt="" />
-        </div>
-        <div class="job-company-info">
-          <section>
-            <div class="company-new-featured">
-              <p class="company">{{ job.company }}</p>
-              <p v-if="job.new" class="new">NEW!</p>
-              <p v-if="job.featured" class="featured">FEATURED</p>
-            </div>
+        <section class="job-info-left">
+          <div class="logo-container">
+            <img :src="job.logo" alt="" />
+          </div>
+          <div class="job-company-info">
+            <section>
+              <div class="company-new-featured">
+                <p class="company">{{ job.company }}</p>
+                <p v-if="job.new" class="new">NEW!</p>
+                <p v-if="job.featured" class="featured">FEATURED</p>
+              </div>
 
-            <h2 class="position">{{ job.position }}</h2>
-            <div class="extra-info">
-              {{ job.postedAt }} <span>•</span> {{ job.contract }}
-              <span>•</span>
-              {{ job.location }}
-            </div>
-          </section>
-        </div>
+              <h2 class="position">{{ job.position }}</h2>
+              <div class="extra-info">
+                {{ job.postedAt }} <span>•</span> {{ job.contract }}
+                <span>•</span>
+                {{ job.location }}
+              </div>
+            </section>
+          </div>
+        </section>
 
         <section class="languages">
           <p class="skills" @click="filterRole(job.role)">
@@ -216,24 +218,24 @@ export default {
 .featured_border {
   border-left: 5px solid hsl(180, 29%, 50%);
 }
-.job-info > section * {
-  margin-bottom: 0.4rem;
-}
 .job-info {
   display: flex;
-  gap: 15%;
   justify-content: space-between;
+}
+.job-info-left {
+  display: flex;
+  gap: 1rem;
+  align-items: center;
 }
 
 .job-company-info {
   display: flex;
   align-items: center;
   gap: 5%;
-  width: 40%;
+  width: 100%;
 }
 
 .logo-container {
-  margin-right: -12%;
   min-width: 80px;
 }
 
@@ -246,30 +248,36 @@ img {
   }
 }
 
-@media (max-width: 650px) {
+@media (max-width: 700px) {
   .logo-container {
     position: relative;
     bottom: 3rem;
+    right: 44%;
     width: 10%;
     margin: 0;
   }
   .job-info {
     flex-direction: column;
   }
-  .job-company-info {
-    border-bottom: 1px solid hsla(180, 8%, 52%, 0.5);
+  .job-info-left {
+    border-bottom: 1px solid hsla(180, 8%, 52%, 0.4);
     margin-bottom: 1rem;
     padding-bottom: 1rem;
     width: 100%;
+    flex-direction: column;
   }
   .job-company-info section {
     margin-top: -2rem;
+  }
+  .company-new-featured {
+    margin-top: -1rem;
   }
 }
 
 @media (max-width: 475px) {
   .logo-container {
     bottom: 2.5rem;
+    right: 42%;
   }
 }
 
