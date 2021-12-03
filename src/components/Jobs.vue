@@ -296,8 +296,8 @@ img {
 .featured {
   position: relative;
   bottom: 4px;
-  padding: 8px 8px;
-  padding-bottom: 4px;
+  padding: 6px 8px;
+  padding-bottom: 2px;
   font-size: clamp(0.4rem, 0.8vw, 1rem);
   font-weight: 700;
   color: #fff;
