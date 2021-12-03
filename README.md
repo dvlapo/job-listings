@@ -28,8 +28,8 @@ Users should be able to:
 
 ### Links
 
-- Solution URL: [Add solution URL here](https://www.frontendmentor.io/solutions/vue-3-MYLy8rpmn)
-- Live Site URL: [Add live site URL here](https://dvlapo-job-listings.netlify.app/)
+- Solution URL: (https://www.frontendmentor.io/solutions/vue-3-MYLy8rpmn)
+- Live Site URL: (https://dvlapo-job-listings.netlify.app/)
 
 ## My process
 
